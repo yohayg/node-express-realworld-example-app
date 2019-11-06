@@ -35,7 +35,8 @@
     "request": "2.69.0",
     "slug": "0.9.1",
     "underscore": "1.8.3",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "newman": "^3.8.2",
