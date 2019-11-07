@@ -1,14 +1,9 @@
 const
-    // http = require('http'),
-    // path = require('path'),
-    // methods = require('methods'),
+
     express = require('express'),
     bodyParser = require('body-parser'),
-    // session = require('express-session'),
     cors = require('cors'),
-    // passport = require('passport'),
     errorhandler = require('errorhandler');
-    // mongoose = require('mongoose'),
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -33,24 +28,11 @@ app.get('/', (req, res) => {
 });
 
 
-// app.use(session({ secret: 'conduit', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
+// app.use(session({ secret: 'mysecret', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
 
 if (!isProduction) {
     app.use(errorhandler());
 }
-
-if (isProduction) {
-    // mongoose.connect(process.env.MONGODB_URI);
-} else {
-    // mongoose.connect('mongodb://localhost/conduit');
-    // mongoose.set('debug', true);
-
-}
-
-// require('./models/User');
-// require('./models/Article');
-// require('./models/Comment');
-// require('./config/passport');
 
 app.use(require('./routes'));
 

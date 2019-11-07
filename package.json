@@ -1,10 +1,10 @@
 {
-  "name": "conduit-node",
+  "name": "nodejs-jobs-api",
   "version": "1.0.0",
-  "description": "conduit on node",
+  "description": "nodejs-jobs-api on node",
   "main": "app.js",
   "scripts": {
-    "mongo:start": "docker run --name realworld-mongo -p 27017:27017 mongo & sleep 5",
+    "mongo:start": "docker run --name nodejs-jobs-api -p 27017:27017 mongo & sleep 5",
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
     "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gothinkster/productionready-node-api.git"
+    "url": "git+https://github.com/yohayg/nodejs-jobs-api.git"
   },
   "license": "ISC",
   "dependencies": {
